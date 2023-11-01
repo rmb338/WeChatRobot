@@ -14,7 +14,7 @@ from func_chatgpt import ChatGPT
 from func_chengyu import cy
 from func_news import News
 from func_tigerbot import TigerBot
-from SparkApi import SparkApi
+from func_spark import Spark
 from job_mgmt import Job
 
 
