@@ -14,6 +14,7 @@ from func_chatgpt import ChatGPT
 from func_chengyu import cy
 from func_news import News
 from func_tigerbot import TigerBot
+from SparkApi import SparkApi
 from job_mgmt import Job
 
 
@@ -27,8 +28,9 @@ class Robot(Job):
         self.LOG = logging.getLogger("Robot")
         self.wxid = self.wcf.get_self_wxid()
         self.allContacts = self.getAllContacts()
-
-        if self.config.TIGERBOT:
+        if self.config.SPARK:
+            self.chat = Spark(self.config.SPARK)
+        elif self.config.TIGERBOT:
             self.chat = TigerBot(self.config.TIGERBOT)
         elif self.config.CHATGPT:
             cgpt = self.config.CHATGPT

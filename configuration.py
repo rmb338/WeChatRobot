@@ -31,3 +31,4 @@ class Config(object):
         self.CHATGPT = yconfig.get("chatgpt")
         self.NEWS = yconfig["news"]["receivers"]
         self.TIGERBOT = yconfig.get("tigerbot")
+        self.SPARK = yconfig.get("Spark")

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{eba20ffc-26ed-4c1b-ab06-6f7ba7ad1fbe}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>func_spark.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>CondaEnv|CondaEnv|Anaconda3</InterpreterId>
+    <IsWindowsApplication>False</IsWindowsApplication>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="config.yaml" />
+    <Content Include="config.yaml.template" />
+    <Content Include="logs\wcf.txt" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="configuration.py" />
+    <Compile Include="func_chatgpt.py" />
+    <Compile Include="func_chengyu.py" />
+    <Compile Include="func_news.py" />
+    <Compile Include="func_spark.py" />
+    <Compile Include="func_tigerbot.py" />
+    <Compile Include="job_mgmt.py" />
+    <Compile Include="main.py" />
+    <Compile Include="robot.py" />
+    <Compile Include="SparkApi.py" />
+    <Compile Include="test.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="logs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="CondaEnv|CondaEnv|Anaconda3" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
